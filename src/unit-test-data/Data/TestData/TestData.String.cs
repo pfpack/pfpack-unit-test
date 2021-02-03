@@ -13,5 +13,9 @@ namespace PrimeFuncPack.UnitTest
         public const string TabString = "\t";
 
         public const string SomeString = "Some String";
+
+        public const string LowerSomeString = "some string";
+
+        public const string UpperSomeString = "SOME STRING";
     }
 }

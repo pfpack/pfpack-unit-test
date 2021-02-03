@@ -20,6 +20,19 @@ namespace PrimeFuncPack.UnitTest.Data.Tests
         }
 
         [Fact]
+        public void LowerSomeTextStructType_ExpectStructTypeTextIsLowerSomeString()
+        {
+            var actual = TestData.LowerSomeTextStructType;
+
+            var expected = new StructType
+            {
+                Text = TestData.LowerSomeString
+            };
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
         public void NullTextStructType_ExpectDefaultStructTypeValue()
         {
             var actual = TestData.NullTextStructType;
