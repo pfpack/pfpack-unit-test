@@ -11,7 +11,7 @@
 		<Copyright>Copyright © 2020 Andrei Sergeev, Pavel Moskovoy</Copyright>
 		<RootNamespace>PrimeFuncPack.UnitTest</RootNamespace>
 		<AssemblyName>PrimeFuncPack.UnitTest.Data</AssemblyName>
-		<Version>2.0.5</Version>
+		<Version>2.0.6</Version>
 	</PropertyGroup>
 
 	<ItemGroup>

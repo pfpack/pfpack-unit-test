@@ -8,9 +8,15 @@ namespace PrimeFuncPack.UnitTest
 
         public const string WhiteSpaceString = " ";
 
+        public const string TwoWhiteSpacesString = "  ";
+
         public const string ThreeWhiteSpacesString = "   ";
 
         public const string TabString = "\t";
+
+        public const string TwoTabsString = "\t\t";
+
+        public const string MixedWhiteSpacesString = "\t\t ";
 
         public const string SomeString = "Some String";
 
