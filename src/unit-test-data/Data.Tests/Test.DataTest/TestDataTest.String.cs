@@ -23,7 +23,16 @@ namespace PrimeFuncPack.UnitTest.Data.Tests
         }
 
         [Fact]
-        public void ThreeWhiteSpacesString_ExpectWhiteSpaces()
+        public void TwoWhiteSpacesString_ExpectTwoWhiteSpacesString()
+        {
+            var actual = TestData.TwoWhiteSpacesString;
+
+            var expected = new string(' ', 2);
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void ThreeWhiteSpacesString_ExpectThreeWhiteSpacesString()
         {
             var actual = TestData.ThreeWhiteSpacesString;
 
@@ -32,11 +41,30 @@ namespace PrimeFuncPack.UnitTest.Data.Tests
         }
 
         [Fact]
-        public void TabString_ExpectTabSymbol()
+        public void TabString_ExpectTabString()
         {
             var actual = TestData.TabString;
 
             var expected = new string('\t', 1);
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void TwoTabsString_ExpectTwoTabsString()
+        {
+            var actual = TestData.TwoTabsString;
+
+            var expected = new string('\t', 2);
+            Assert.Equal(expected, actual);
+        }
+
+
+        [Fact]
+        public void MixedWhiteSpacesString_ExpectTheMixedWhiteSpacesString()
+        {
+            var actual = TestData.MixedWhiteSpacesString;
+
+            var expected = new string(new [] { '\t', '\t', ' '});
             Assert.Equal(expected, actual);
         }
 
