@@ -33,16 +33,16 @@ jobs:
       run: dotnet restore ./src/*/*/Data.csproj
 
     - name: Build Data
-      run: dotnet build ./src/*/*/Data.csproj --no-restore
+      run: dotnet build ./src/*/*/Data.csproj --no-restore  -c Release
 
     - name: Pack Data
-      run: dotnet pack ./src/*/*/Data.csproj --no-restore -o ~/nuget
+      run: dotnet pack ./src/*/*/Data.csproj --no-restore -o ~/nuget  -c Release
       
     - name: Restore Data.Tests
       run: dotnet restore ./src/*/*/Data.Tests.csproj
 
     - name: Test Data.Tests
-      run: dotnet test ./src/*/*/Data.Tests.csproj --no-restore
+      run: dotnet test ./src/*/*/Data.Tests.csproj --no-restore  -c Release
       
     - name: Push Packages
       if: ${{ github.event_name == 'release' }}
