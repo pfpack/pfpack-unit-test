@@ -6,7 +6,7 @@ namespace PrimeFuncPack.UnitTest
     {
         public static readonly RecordType PlusFifteenIdSomeStringNameRecord
             =
-            new RecordType
+            new()
             {
                 Id = PlusFifteen,
                 Name = SomeString
@@ -14,7 +14,7 @@ namespace PrimeFuncPack.UnitTest
 
         public static readonly RecordType PlusFifteenIdLowerSomeStringNameRecord
             =
-            new RecordType
+            new()
             {
                 Id = PlusFifteen,
                 Name = LowerSomeString
@@ -22,7 +22,7 @@ namespace PrimeFuncPack.UnitTest
 
         public static readonly RecordType MinusFifteenIdSomeStringNameRecord
             =
-            new RecordType
+            new()
             {
                 Id = MinusFifteen,
                 Name = SomeString
@@ -30,7 +30,7 @@ namespace PrimeFuncPack.UnitTest
 
         public static readonly RecordType MinusFifteenIdNullNameRecord
             =
-            new RecordType
+            new()
             {
                 Id = MinusFifteen,
                 Name = null
@@ -38,7 +38,7 @@ namespace PrimeFuncPack.UnitTest
 
         public static readonly RecordType ZeroIdNullNameRecord
             =
-            new RecordType
+            new()
             {
                 Id = Zero,
                 Name = null

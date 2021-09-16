@@ -94,5 +94,32 @@ namespace PrimeFuncPack.UnitTest.Data.Tests
             var expected = TestData.SomeString.ToUpperInvariant();
             Assert.Equal(expected, actual, true);
         }
+
+        [Fact]
+        public void AnotherString_ExpectTextIsSomeString()
+        {
+            var actual = TestData.AnotherString;
+
+            var expected = "Another string";
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void LowerAnotherString_ExpectTextIsResultOfSomeStringToLower()
+        {
+            var actual = TestData.LowerAnotherString;
+
+            var expected = TestData.AnotherString.ToLowerInvariant();
+            Assert.Equal(expected, actual, true);
+        }
+
+        [Fact]
+        public void UpperAnotherString_ExpectTextIsResultOfSomeStringToUpper()
+        {
+            var actual = TestData.UpperAnotherString;
+
+            var expected = TestData.AnotherString.ToUpperInvariant();
+            Assert.Equal(expected, actual, true);
+        }
     }
 }

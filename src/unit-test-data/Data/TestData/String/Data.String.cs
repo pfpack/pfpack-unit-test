@@ -23,5 +23,11 @@ namespace PrimeFuncPack.UnitTest
         public const string LowerSomeString = "some string";
 
         public const string UpperSomeString = "SOME STRING";
+
+        public const string AnotherString = "Another string";
+
+        public const string LowerAnotherString = "another string";
+
+        public const string UpperAnotherString = "ANOTHER STRING";
     }
 }

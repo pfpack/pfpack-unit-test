@@ -33,6 +33,32 @@ namespace PrimeFuncPack.UnitTest.Data.Tests
         }
 
         [Fact]
+        public void AnotherTextStructType_ExpectStructTypeTextIsAnotherString()
+        {
+            var actual = TestData.AnotherTextStructType;
+
+            var expected = new StructType
+            {
+                Text = TestData.AnotherString
+            };
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void UpperAnotherTextStructType_ExpectStructTypeTextIsUpperAnotherString()
+        {
+            var actual = TestData.UpperAnotherTextStructType;
+
+            var expected = new StructType
+            {
+                Text = TestData.UpperAnotherString
+            };
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
         public void NullTextStructType_ExpectDefaultStructTypeValue()
         {
             var actual = TestData.NullTextStructType;
