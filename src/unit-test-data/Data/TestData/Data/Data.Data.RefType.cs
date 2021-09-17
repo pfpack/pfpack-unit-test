@@ -6,19 +6,21 @@ namespace PrimeFuncPack.UnitTest
     {
         public static readonly RefType PlusFifteenIdRefType
             =
-            new RefType
+            new()
             {
                 Id = PlusFifteen
             };
 
         public static readonly RefType ZeroIdRefType
-            = new RefType
+            =
+            new()
             {
                 Id = Zero
             };
 
         public static readonly RefType MinusFifteenIdRefType
-            = new RefType
+            =
+            new()
             {
                 Id = MinusFifteen
             };

@@ -6,7 +6,7 @@ namespace PrimeFuncPack.UnitTest
     {
         // To avoid possible uninitialized static fields
         static TestData()
-        {            
+        {
         }
     }
 }
