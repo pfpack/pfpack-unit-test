@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <IsPackable>false</IsPackable>
+    <GenerateProgramFile>false</GenerateProgramFile>
+    <Authors>Andrei Sergeev, Pavel Moskovoy</Authors>
+    <Description>PrimeFuncPack: A Functional Programming Pack for .NET</Description>
+    <Copyright>Copyright © 2020-2021 Andrei Sergeev, Pavel Moskovoy</Copyright>
+    <RootNamespace>PrimeFuncPack.UnitTest.Data.Tests</RootNamespace>
+    <AssemblyName>PrimeFuncPack.UnitTest.Data.FSharp.Tests</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Tests.DataTest\" />
+    <Folder Include="TestHelper\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="TestHelper\TestHelper.fs" />
+    <Compile Include="Tests.DataTest\Test.Int32.fs" />
+    <Compile Include="Tests.DataTest\Test.String.fs" />
+    <Compile Include="Tests.DataTest\Test.Data.RecordType.fs" />
+    <Compile Include="Tests.DataTest\Test.Data.RefType.fs" />
+    <Compile Include="Tests.DataTest\Test.Data.StructType.fs" />
+    <Compile Include="Program.fs" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.1.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="DeepEqual" Version="2.0.0">
+      <GeneratePathProperty></GeneratePathProperty>
+    </PackageReference>
+    <PackageReference Include="FSharp.Core" Version="6.0.0">
+      <GeneratePathProperty></GeneratePathProperty>
+    </PackageReference>
+    <ProjectReference Include="..\Data\Data.csproj" />
+  </ItemGroup>
+</Project>
