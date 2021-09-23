@@ -1,8 +1,5 @@
-﻿#nullable enable
+﻿namespace PrimeFuncPack.UnitTest.Data.Tests;
 
-namespace PrimeFuncPack.UnitTest.Data.Tests
+public sealed partial class TestDataTest
 {
-    public sealed partial class TestDataTest
-    {
-    }
 }

@@ -1,74 +1,71 @@
-#nullable enable
-
 using DeepEqual.Syntax;
 using Xunit;
 
-namespace PrimeFuncPack.UnitTest.Data.Tests
+namespace PrimeFuncPack.UnitTest.Data.Tests;
+
+partial class TestDataTest
 {
-    partial class TestDataTest
+    [Fact]
+    public void PlusFifteenIdSomeStringNameRecord_ExpectIdIsFifteenAndNameIsSomeString()
     {
-        [Fact]
-        public void PlusFifteenIdSomeStringNameRecord_ExpectIdIsFifteenAndNameIsSomeString()
+        var actual = TestData.PlusFifteenIdSomeStringNameRecord;
+
+        var expected = new RecordType
         {
-            var actual = TestData.PlusFifteenIdSomeStringNameRecord;
+            Id = TestData.PlusFifteen,
+            Name = TestData.SomeString
+        };
 
-            var expected = new RecordType
-            {
-                 Id = TestData.PlusFifteen,
-                 Name = TestData.SomeString
-            };
+        actual.ShouldDeepEqual(expected);
+    }
 
-            actual.ShouldDeepEqual(expected);
-        }
+    [Fact]
+    public void PlusFifteenIdLowerSomeStringNameRecord_ExpectIdIsFifteenAndNameIsLowerSomeString()
+    {
+        var actual = TestData.PlusFifteenIdLowerSomeStringNameRecord;
 
-        [Fact]
-        public void PlusFifteenIdLowerSomeStringNameRecord_ExpectIdIsFifteenAndNameIsLowerSomeString()
+        var expected = new RecordType
         {
-            var actual = TestData.PlusFifteenIdLowerSomeStringNameRecord;
+            Id = TestData.PlusFifteen,
+            Name = TestData.LowerSomeString
+        };
 
-            var expected = new RecordType
-            {
-                 Id = TestData.PlusFifteen,
-                 Name = TestData.LowerSomeString
-            };
+        actual.ShouldDeepEqual(expected);
+    }
 
-            actual.ShouldDeepEqual(expected);
-        }
+    [Fact]
+    public void MinusFifteenIdSomeStringNameRecord_ExpectIdIsMinusFifteenAndNameIsSomeString()
+    {
+        var actual = TestData.MinusFifteenIdSomeStringNameRecord;
 
-        [Fact]
-        public void MinusFifteenIdSomeStringNameRecord_ExpectIdIsMinusFifteenAndNameIsSomeString()
+        var expected = new RecordType
         {
-            var actual = TestData.MinusFifteenIdSomeStringNameRecord;
+            Id = TestData.MinusFifteen,
+            Name = TestData.SomeString
+        };
 
-            var expected = new RecordType
-            {
-                 Id = TestData.MinusFifteen,
-                 Name = TestData.SomeString
-            };
+        actual.ShouldDeepEqual(expected);
+    }
 
-            actual.ShouldDeepEqual(expected);
-        }
+    [Fact]
+    public void MinusFifteenIdNullNameRecord_ExpectIdIsMinusFifteenAndNameIsNull()
+    {
+        var actual = TestData.MinusFifteenIdNullNameRecord;
 
-        [Fact]
-        public void MinusFifteenIdNullNameRecord_ExpectIdIsMinusFifteenAndNameIsNull()
+        var expected = new RecordType
         {
-            var actual = TestData.MinusFifteenIdNullNameRecord;
+            Id = TestData.MinusFifteen
+        };
 
-            var expected = new RecordType
-            {
-                 Id = TestData.MinusFifteen
-            };
+        actual.ShouldDeepEqual(expected);
+    }
 
-            actual.ShouldDeepEqual(expected);
-        }
+    [Fact]
+    public void ZeroIdNullNameRecord_ExpectIdIsZeroAndNameIsNull()
+    {
+        var actual = TestData.ZeroIdNullNameRecord;
 
-        [Fact]
-        public void ZeroIdNullNameRecord_ExpectIdIsZeroAndNameIsNull()
-        {
-            var actual = TestData.ZeroIdNullNameRecord;
-
-            var expected = new RecordType();
-            actual.ShouldDeepEqual(expected);
-        }
+        var expected = new RecordType();
+        actual.ShouldDeepEqual(expected);
     }
 }

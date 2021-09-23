@@ -1,15 +1,12 @@
-﻿#nullable enable
+﻿using static System.FormattableString;
 
-using static System.FormattableString;
+namespace PrimeFuncPack.UnitTest;
 
-namespace PrimeFuncPack.UnitTest
+public sealed class RefType
 {
-    public sealed class RefType
-    {
-        public int Id { get; set; }
+    public int Id { get; set; }
 
-        public override string? ToString()
-            =>
-            Invariant($"{nameof(RefType)}: {nameof(Id)} = {Id}");
-    }
+    public override string? ToString()
+        =>
+        Invariant($"{nameof(RefType)}: {nameof(Id)} = {Id}");
 }
