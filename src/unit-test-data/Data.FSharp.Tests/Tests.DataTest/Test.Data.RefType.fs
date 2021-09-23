@@ -7,7 +7,7 @@ open TestHelper
 module DataRefTypeTest =
 
     [<Fact>]
-    let ``TestData.PlusFifteenIdRefType should be with the id is 15``() =
+    let ``TestData.PlusFifteenIdRefType should be the id is 15``() =
         let expected = RefType(Id = TestData.PlusFifteen)
         TestData.PlusFifteenIdRefType |> shouldBeDeepEqual (new RefType(Id = TestData.PlusFifteen))
 
@@ -16,20 +16,20 @@ module DataRefTypeTest =
         TestData.PlusFifteenIdRefType |> shouldBeTheSame TestData.PlusFifteenIdRefType
 
     [<Fact>]
-    let ZeroIdRefType_ExpectRefTypeIdIsZero() =
+    let ``TestData.ZeroIdRefType should be the id is 0``() =
         let expected = RefType(Id = TestData.Zero)
         TestData.ZeroIdRefType |> shouldBeDeepEqual expected
 
     [<Fact>]
-    let ZeroIdRefTypeTwoTimes_ExpectSameValues() =
+    let ``Call TestData.ZeroIdRefType two times. Expect the results are same``() =
         TestData.ZeroIdRefType |> shouldBeTheSame TestData.ZeroIdRefType
 
 
     [<Fact>]
-    let MinusFifteenIdRefType_ExpectRefTypeIdIsMinusFifteen() =
+    let ``TestData.MinusFifteenIdRefType should be the id is -15``() =
         let expected = RefType(Id = TestData.MinusFifteen)
         TestData.MinusFifteenIdRefType |> shouldBeDeepEqual expected
 
     [<Fact>]
-    let MinusFifteenIdRefTypeTwoTimes_ExpectSameValues() =
+    let ``Call TestData.MinusFifteenIdRefType two times. Expect the results are same``() =
         TestData.MinusFifteenIdRefType |> shouldBeTheSame TestData.MinusFifteenIdRefType
