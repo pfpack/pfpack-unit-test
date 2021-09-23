@@ -9,7 +9,7 @@ module DataRefTypeTest =
     [<Fact>]
     let ``TestData.PlusFifteenIdRefType should be with the id is 15``() =
         let expected = RefType(Id = TestData.PlusFifteen)
-        TestData.PlusFifteenIdRefType |> shouldDeepEqual (new RefType(Id = TestData.PlusFifteen))
+        TestData.PlusFifteenIdRefType |> shouldBeDeepEqual (new RefType(Id = TestData.PlusFifteen))
 
     [<Fact>]
     let ``Call TestData.PlusFifteenIdRefType two times. Expect the results are same``() =
@@ -18,7 +18,7 @@ module DataRefTypeTest =
     [<Fact>]
     let ZeroIdRefType_ExpectRefTypeIdIsZero() =
         let expected = RefType(Id = TestData.Zero)
-        TestData.ZeroIdRefType |> shouldDeepEqual expected
+        TestData.ZeroIdRefType |> shouldBeDeepEqual expected
 
     [<Fact>]
     let ZeroIdRefTypeTwoTimes_ExpectSameValues() =
@@ -28,7 +28,7 @@ module DataRefTypeTest =
     [<Fact>]
     let MinusFifteenIdRefType_ExpectRefTypeIdIsMinusFifteen() =
         let expected = RefType(Id = TestData.MinusFifteen)
-        TestData.MinusFifteenIdRefType |> shouldDeepEqual expected
+        TestData.MinusFifteenIdRefType |> shouldBeDeepEqual expected
 
     [<Fact>]
     let MinusFifteenIdRefTypeTwoTimes_ExpectSameValues() =

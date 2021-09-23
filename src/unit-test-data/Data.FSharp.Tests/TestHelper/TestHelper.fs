@@ -17,5 +17,5 @@ module internal TestHelper =
     let internal shouldBeEqualString expected actual =
         Assert.Equal(expected = expected, actual = actual, ignoreCase = false)
 
-    let internal shouldDeepEqual expected actual =
+    let internal shouldBeDeepEqual expected actual =
         actual.ShouldDeepEqual(expected)
