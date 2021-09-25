@@ -1,12 +1,10 @@
-﻿#nullable enable
+﻿namespace PrimeFuncPack.UnitTest;
 
-namespace PrimeFuncPack.UnitTest
+public static partial class TestData
 {
-    public static partial class TestData
+    // To avoid possible uninitialized static fields
+    static TestData()
     {
-        // To avoid possible uninitialized static fields
-        static TestData()
-        {
-        }
     }
 }
+

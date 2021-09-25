@@ -1,71 +1,68 @@
-﻿#nullable enable
+﻿using Xunit;
 
-using Xunit;
+namespace PrimeFuncPack.UnitTest.Data.Tests;
 
-namespace PrimeFuncPack.UnitTest.Data.Tests
+partial class TestDataTest
 {
-    partial class TestDataTest
+    [Fact]
+    public void SomeTextStructType_ExpectStructTypeTextIsSomeString()
     {
-        [Fact]
-        public void SomeTextStructType_ExpectStructTypeTextIsSomeString()
+        var actual = TestData.SomeTextStructType;
+
+        var expected = new StructType
         {
-            var actual = TestData.SomeTextStructType;
+            Text = TestData.SomeString
+        };
 
-            var expected = new StructType
-            {
-                Text = TestData.SomeString
-            };
+        Assert.Equal(expected, actual);
+    }
 
-            Assert.Equal(expected, actual);
-        }
+    [Fact]
+    public void LowerSomeTextStructType_ExpectStructTypeTextIsLowerSomeString()
+    {
+        var actual = TestData.LowerSomeTextStructType;
 
-        [Fact]
-        public void LowerSomeTextStructType_ExpectStructTypeTextIsLowerSomeString()
+        var expected = new StructType
         {
-            var actual = TestData.LowerSomeTextStructType;
+            Text = TestData.LowerSomeString
+        };
 
-            var expected = new StructType
-            {
-                Text = TestData.LowerSomeString
-            };
+        Assert.Equal(expected, actual);
+    }
 
-            Assert.Equal(expected, actual);
-        }
+    [Fact]
+    public void AnotherTextStructType_ExpectStructTypeTextIsAnotherString()
+    {
+        var actual = TestData.AnotherTextStructType;
 
-        [Fact]
-        public void AnotherTextStructType_ExpectStructTypeTextIsAnotherString()
+        var expected = new StructType
         {
-            var actual = TestData.AnotherTextStructType;
+            Text = TestData.AnotherString
+        };
 
-            var expected = new StructType
-            {
-                Text = TestData.AnotherString
-            };
+        Assert.Equal(expected, actual);
+    }
 
-            Assert.Equal(expected, actual);
-        }
+    [Fact]
+    public void UpperAnotherTextStructType_ExpectStructTypeTextIsUpperAnotherString()
+    {
+        var actual = TestData.UpperAnotherTextStructType;
 
-        [Fact]
-        public void UpperAnotherTextStructType_ExpectStructTypeTextIsUpperAnotherString()
+        var expected = new StructType
         {
-            var actual = TestData.UpperAnotherTextStructType;
+            Text = TestData.UpperAnotherString
+        };
 
-            var expected = new StructType
-            {
-                Text = TestData.UpperAnotherString
-            };
+        Assert.Equal(expected, actual);
+    }
 
-            Assert.Equal(expected, actual);
-        }
+    [Fact]
+    public void NullTextStructType_ExpectDefaultStructTypeValue()
+    {
+        var actual = TestData.NullTextStructType;
 
-        [Fact]
-        public void NullTextStructType_ExpectDefaultStructTypeValue()
-        {
-            var actual = TestData.NullTextStructType;
+        var expected = default(StructType);
 
-            var expected = default(StructType);
-
-            Assert.Equal(expected, actual);
-        }
+        Assert.Equal(expected, actual);
     }
 }
