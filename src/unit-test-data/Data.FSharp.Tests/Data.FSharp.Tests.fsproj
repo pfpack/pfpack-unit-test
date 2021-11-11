@@ -4,20 +4,14 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <InvariantGlobalization>true</InvariantGlobalization>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <IsPackable>false</IsPackable>
-    <GenerateProgramFile>false</GenerateProgramFile>
     <Authors>Andrei Sergeev, Pavel Moskovoy</Authors>
-    <Description>PrimeFuncPack: A Functional Programming Pack for .NET</Description>
     <Copyright>Copyright © 2020-2021 Andrei Sergeev, Pavel Moskovoy</Copyright>
     <RootNamespace>PrimeFuncPack.UnitTest.Data.Tests</RootNamespace>
     <AssemblyName>PrimeFuncPack.UnitTest.Data.FSharp.Tests</AssemblyName>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Tests.DataTest\" />
-    <Folder Include="TestHelper\" />
-  </ItemGroup>
 
   <ItemGroup>
     <Compile Include="TestHelper\TestHelper.fs" />
@@ -44,11 +38,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="DeepEqual" Version="2.0.0">
-      <GeneratePathProperty></GeneratePathProperty>
-    </PackageReference>
-    <PackageReference Include="FSharp.Core" Version="6.0.0">
-      <GeneratePathProperty></GeneratePathProperty>
-    </PackageReference>
+    <PackageReference Include="DeepEqual" Version="2.0.0" />
+    <PackageReference Include="FSharp.Core" Version="6.0.0" />
   </ItemGroup>
+
 </Project>
