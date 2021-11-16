@@ -40,10 +40,10 @@ jobs:
       run: dotnet pack ./src/*/*/Data.csproj --no-restore -o ~/nuget  -c Release
       
     - name: Restore Data.Tests
-      run: dotnet restore ./src/*/*/Data.Tests.csproj
+      run: dotnet restore ./src/*/*/Data.Tests.fsproj
 
     - name: Test Data.Tests
-      run: dotnet test ./src/*/*/Data.Tests.csproj --no-restore  -c Release
+      run: dotnet test ./src/*/*/Data.Tests.fsproj --no-restore  -c Release
       
     - name: Push Packages
       if: ${{ github.event_name == 'release' }}
