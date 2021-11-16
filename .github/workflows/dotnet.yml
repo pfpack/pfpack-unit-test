@@ -44,12 +44,6 @@ jobs:
 
     - name: Test Data.Tests
       run: dotnet test ./src/*/*/Data.Tests.csproj --no-restore  -c Release
-
-    - name: Restore Data.FSharp.Tests
-      run: dotnet restore ./src/*/*/Data.FSharp.Tests.fsproj
-
-    - name: Test Data.FSharp.Tests
-      run: dotnet test ./src/*/*/Data.FSharp.Tests.fsproj --no-restore  -c Release
       
     - name: Push Packages
       if: ${{ github.event_name == 'release' }}
