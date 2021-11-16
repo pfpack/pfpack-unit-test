@@ -1,7 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <GenerateProgramFile>true</GenerateProgramFile>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <InvariantGlobalization>true</InvariantGlobalization>
@@ -14,12 +15,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="TestHelper\TestHelper.fs" />
+    <Compile Include="Tests.DataTest\Test.Int32.fs" />
+    <Compile Include="Tests.DataTest\Test.String.fs" />
+    <Compile Include="Tests.DataTest\Test.Data.RecordType.fs" />
+    <Compile Include="Tests.DataTest\Test.Data.RefType.fs" />
+    <Compile Include="Tests.DataTest\Test.Data.StructType.fs" />
+    <Compile Include="Tests.DataTest\Test.Data.RecordStruct.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DeepEqual" Version="2.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -29,6 +39,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="DeepEqual" Version="2.0.0" />
+    <PackageReference Include="FSharp.Core" Version="6.0.1" />
   </ItemGroup>
 
 </Project>
