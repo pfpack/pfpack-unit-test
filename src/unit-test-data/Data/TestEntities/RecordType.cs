@@ -2,7 +2,7 @@ using static System.FormattableString;
 
 namespace PrimeFuncPack.UnitTest;
 
-public sealed record RecordType
+public sealed record class RecordType
 {
     public int Id { get; set; }
 
@@ -12,4 +12,3 @@ public sealed record RecordType
         =>
         Invariant($"{nameof(RefType)}.{Id}: '{Name}'");
 }
-

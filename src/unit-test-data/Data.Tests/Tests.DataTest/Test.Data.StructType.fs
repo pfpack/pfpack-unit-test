@@ -30,4 +30,3 @@ module DataStructTypeTest =
     let ``TestData.NullTextStructType should be the text is null``() =
         let expected = StructType()
         TestData.NullTextStructType |> shouldBeEqual expected
-
