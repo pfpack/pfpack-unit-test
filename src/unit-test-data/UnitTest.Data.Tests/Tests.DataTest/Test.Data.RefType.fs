@@ -1,4 +1,4 @@
-﻿namespace PrimeFuncPack.UnitTest.Data.Tests.TestData
+﻿namespace PrimeFuncPack.UnitTest.Data.Tests
 
 open Xunit
 open PrimeFuncPack.UnitTest
