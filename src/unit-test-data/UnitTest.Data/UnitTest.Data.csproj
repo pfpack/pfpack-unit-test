@@ -17,7 +17,7 @@
     <Description>PrimeFuncPack UnitTest.Data is a library for .NET consisting of data types and predefined values to support unit testing.</Description>
     <RootNamespace>PrimeFuncPack.UnitTest</RootNamespace>
     <AssemblyName>PrimeFuncPack.UnitTest.Data</AssemblyName>
-    <Version>3.0.1-preview.1</Version>
+    <Version>3.1.0-preview.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
