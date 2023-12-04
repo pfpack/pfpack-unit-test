@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
     <GenerateProgramFile>true</GenerateProgramFile>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -9,7 +9,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <IsPackable>false</IsPackable>
     <Authors>Andrei Sergeev, Pavel Moskovoy</Authors>
-    <Copyright>Copyright © 2020-2022 Andrei Sergeev, Pavel Moskovoy</Copyright>
+    <Copyright>Copyright © 2020-2023 Andrei Sergeev, Pavel Moskovoy</Copyright>
     <RootNamespace>PrimeFuncPack.UnitTest.Data.Tests</RootNamespace>
     <AssemblyName>PrimeFuncPack.UnitTest.Data.Tests</AssemblyName>
   </PropertyGroup>
@@ -25,22 +25,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="coverlet.collector" Version="3.1.0">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="DeepEqual" Version="2.0.0" />
-    <PackageReference Include="FSharp.Core" Version="6.0.1" />
+    <ProjectReference Include="..\UnitTest.Data\UnitTest.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UnitTest.Data\UnitTest.Data.csproj" />
+    <PackageReference Include="DeepEqual" Version="4.2.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit" Version="2.6.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
