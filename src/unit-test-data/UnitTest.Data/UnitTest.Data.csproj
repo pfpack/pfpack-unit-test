@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <InvariantGlobalization>true</InvariantGlobalization>
@@ -14,11 +15,11 @@
     <RepositoryUrl>https://github.com/pfpack/pfpack-unit-test</RepositoryUrl>
     <Company>pfpack</Company>
     <Authors>Andrei Sergeev, Pavel Moskovoy</Authors>
-    <Copyright>Copyright © 2020-2024 Andrei Sergeev, Pavel Moskovoy</Copyright>
+    <Copyright>Copyright © 2020-2025 Andrei Sergeev, Pavel Moskovoy</Copyright>
     <Description>PrimeFuncPack UnitTest.Data is a library for .NET consisting of data types and predefined values to support unit testing.</Description>
     <RootNamespace>PrimeFuncPack.UnitTest</RootNamespace>
     <AssemblyName>PrimeFuncPack.UnitTest.Data</AssemblyName>
-    <Version>3.1.1-preview.1</Version>
+    <Version>3.1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
