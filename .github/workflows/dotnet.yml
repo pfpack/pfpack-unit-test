@@ -1,15 +1,11 @@
-name: .NET
+name: Unit Test .NET
 
 on:
   push:
     branches: [ main, dev, feature/*, fix/*, release/* ]
 
-  pull_request:
-    branches: [ main ]
-
   release:
     types: [ published ]
-    branches: [ main ]
 
 jobs:
   build:
@@ -17,13 +13,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+    - uses: actions/checkout@v6
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: |
-            8.0.x
-            9.0.x
+          10.0.x
+      # dotnet-quality: 'preview' # When using preview versions
+        dotnet-quality: 'ga' # General Availability
 
     # Create Local NuGet Source
 
@@ -36,19 +33,19 @@ jobs:
       # UnitTest.Data
 
     - name: Restore UnitTest.Data
-      run: dotnet restore ./src/*/*/UnitTest.Data.csproj
+      run: dotnet restore ./src/*/UnitTest.Data.csproj
 
     - name: Build UnitTest.Data
-      run: dotnet build ./src/*/*/UnitTest.Data.csproj --no-restore  -c Release
+      run: dotnet build ./src/*/UnitTest.Data.csproj --no-restore  -c Release
 
     - name: Pack UnitTest.Data
-      run: dotnet pack ./src/*/*/UnitTest.Data.csproj --no-restore -o ~/nuget  -c Release
+      run: dotnet pack ./src/*/UnitTest.Data.csproj --no-restore -o ~/nuget  -c Release
 
     - name: Restore UnitTest.Data.Tests
-      run: dotnet restore ./src/*/*/UnitTest.Data.Tests.fsproj
+      run: dotnet restore ./src/*/UnitTest.Data.Tests.fsproj
 
     - name: Test UnitTest.Data.Tests
-      run: dotnet test ./src/*/*/UnitTest.Data.Tests.fsproj --no-restore  -c Release
+      run: dotnet test ./src/*/UnitTest.Data.Tests.fsproj --no-restore  -c Release
 
       # Push
 

@@ -1,6 +1,5 @@
 ﻿namespace PrimeFuncPack.UnitTest.Data.Tests
 
-open DeepEqual.Syntax
 open Xunit
 
 module internal TestHelper =
@@ -11,11 +10,11 @@ module internal TestHelper =
     let internal shouldBeTheSame expected actual =
         Assert.Same(expected = expected, actual = actual)
 
-    let internal shouldBeEqual<'t> (expected : 't) actual =
-        Assert.Equal(expected = expected, actual = actual)
+    let internal shouldBeEqual<'t> (expected : 't) (actual : 't) =
+        Assert.Equal<'t>(expected, actual)
 
     let internal shouldBeEqualString (expected: string) (actual: string) =
         Assert.Equal(expected = expected, actual = actual, ignoreCase = false)
 
     let internal shouldBeDeepEqual expected actual =
-        actual.ShouldDeepEqual(expected)
+        Assert.Equivalent(expected = expected, actual = actual)

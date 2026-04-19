@@ -6,7 +6,7 @@ public struct StructType
 {
     public string? Text { readonly get; set; }
 
-    public override string? ToString()
+    public override readonly string? ToString()
         =>
         Invariant($"{nameof(StructType)}: '{Text}'");
 }

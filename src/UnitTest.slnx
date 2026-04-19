@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="UnitTest.Data.Tests/UnitTest.Data.Tests.fsproj" />
+  <Project Path="UnitTest.Data/UnitTest.Data.csproj" />
+</Solution>
