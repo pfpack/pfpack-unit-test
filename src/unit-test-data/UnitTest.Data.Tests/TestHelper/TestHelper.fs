@@ -11,8 +11,8 @@ module internal TestHelper =
     let internal shouldBeTheSame expected actual =
         Assert.Same(expected = expected, actual = actual)
 
-    let internal shouldBeEqual<'t> (expected : 't) actual =
-        Assert.Equal(expected = expected, actual = actual)
+    //let internal shouldBeEqual<'t> (expected : 't) actual =
+    //    Assert.Equal(expected = expected, actual = actual)
 
     let internal shouldBeEqualString (expected: string) (actual: string) =
         Assert.Equal(expected = expected, actual = actual, ignoreCase = false)
