@@ -20,5 +20,5 @@ public enum EnumType
 
     Eight,
 
-    Nine
+    Nine,
 }
