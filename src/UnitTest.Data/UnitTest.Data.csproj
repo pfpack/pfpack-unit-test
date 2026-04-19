@@ -23,11 +23,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\LICENSE">
+    <None Include="..\..\LICENSE">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="..\..\..\docs\unit-test-data\README.md">
+    <None Include="..\..\docs\unit-test-data\README.md">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
